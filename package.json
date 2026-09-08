@@ -1,0 +1,27 @@
+{
+  "name": "produtosapi",
+  "version": "1.0.0",
+  "description": "API para cadastrar produtos sistema Infotell",
+  "main": "server.js",
+  "scripts": {
+    "dist": "tsup src",
+    "start:dev": "tsx --env-file=.env src/server.ts",
+    "start:watch": "tsx watch --env-file=.env src/server.ts",
+    "start:dist": "npm run dist && node dist/src/server.js"
+  },
+  "keywords": [],
+  "author": "Gustavo Amancio",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "tsup": "^8.5.1",
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "@types/cors": "^2.8.19",
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  }
+}
