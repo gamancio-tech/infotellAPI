@@ -1,16 +1,16 @@
-interface Response {
+export interface HttpResponse {
   statusCode: number
   body: any
 }
 
-export const statusOK = (data: any): Response => {
+export const statusOK = (data: any): HttpResponse => {
   return {
     statusCode: 200,
     body: data
   }
 }
 
-export const statusCreated = (): Response => {
+export const statusCreated = (): HttpResponse => {
   return {
     statusCode: 201,
     body: {
@@ -19,35 +19,35 @@ export const statusCreated = (): Response => {
   }
 }
 
-export const statusNoContent = (): Response => {
+export const statusNoContent = (): HttpResponse => {
   return {
     statusCode: 204,
     body: null
   }
 }
 
-export const statusBadRequest = (): Response => {
+export const statusBadRequest = (): HttpResponse => {
   return {
     statusCode: 400,
     body: null
   }
 }
 
-export const statusUnauthorized = (): Response => {
+export const statusUnauthorized = (): HttpResponse => {
   return {
     statusCode: 401,
     body: null
   }
 }
 
-export const statusNotFound = (): Response => {
+export const statusNotFound = (): HttpResponse => {
   return {
     statusCode: 404,
     body: null
   }
 }
 
-export const statusInternalError = (): Response => {
+export const statusInternalError = (): HttpResponse => {
   return {
     statusCode: 500,
     body: null
