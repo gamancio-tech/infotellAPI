@@ -14,7 +14,7 @@ export const statusCreated = (): HttpResponse => {
   return {
     statusCode: 201,
     body: {
-      message: "sucessful"
+      message: "created"
     }
   }
 }
@@ -26,10 +26,10 @@ export const statusNoContent = (): HttpResponse => {
   }
 }
 
-export const statusBadRequest = (): HttpResponse => {
+export const statusBadRequest = (error: string): HttpResponse => {
   return {
     statusCode: 400,
-    body: null
+    body: { error }
   }
 }
 
@@ -40,16 +40,16 @@ export const statusUnauthorized = (): HttpResponse => {
   }
 }
 
-export const statusNotFound = (): HttpResponse => {
+export const statusNotFound = (error: string): HttpResponse => {
   return {
     statusCode: 404,
-    body: null
+    body: { error }
   }
 }
 
-export const statusInternalError = (): HttpResponse => {
+export const statusInternalError = (error: string): HttpResponse => {
   return {
     statusCode: 500,
-    body: null
+    body: { error }
   }
 }
